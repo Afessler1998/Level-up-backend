@@ -1,6 +1,6 @@
 const makeId = require("../../helpers/makeId");
 const validateExerciseName = require("../../helpers/validators/validateExerciseName");
-const buildMakePersonalRecords = require("./personalRecords");
+const buildMakePersonalRecords = require("./PersonalRecords");
 
 const makePersonalRecords = buildMakePersonalRecords(
   makeId,

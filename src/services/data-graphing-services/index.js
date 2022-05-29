@@ -6,10 +6,10 @@ const exerciseToSpeedData = require("../../helpers/graph-helpers/exerciseToSpeed
 const exerciseToDistanceData = require("../../helpers/graph-helpers/exerciseToDistanceData");
 const dataListToDataPoints = require("../../helpers/graph-helpers/dataListToDataPoints");
 const getHorizontalGuides = require("../../helpers/graph-helpers/getHorizontalGuides");
-const makeGetVolumeGraph = require("./getVolumeGraph");
-const makeGetEstimatedMaxGraph = require("./getEstimatedMaxGraph");
-const makeGetSpeedGraph = require("./getSpeedGraph");
-const makeGetDistanceGraph = require("./getDistanceGraph");
+const makeGetVolumeGraph = require("./GetVolumeGraph");
+const makeGetEstimatedMaxGraph = require("./GetEstimatedMaxGraph");
+const makeGetSpeedGraph = require("./GetSpeedGraph");
+const makeGetDistanceGraph = require("./GetDistanceGraph");
 
 const getVolumeGraph = makeGetVolumeGraph(
   workoutsDb,
