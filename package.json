@@ -1,0 +1,33 @@
+{
+  "name": "level-up-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Level Up Exercise Log",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "nodemon server",
+    "start": "node src/index.js"
+  },
+  "author": "Alec Fessler <afessler1998@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^74.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.12",
+    "nodemailer": "^6.6.1",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^5.0.1",
+    "@stryker-mutator/mocha-runner": "^5.0.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.7"
+  }
+}
