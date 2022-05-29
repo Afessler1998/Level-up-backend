@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const passport = require("passport");
-const connectDb = require("../config/ConnectDb");
+const connectDb = require("../config/connectDb");
 const authenticateUser = require("../src/helpers/middlewares/authenticateUser");
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
@@ -18,8 +18,8 @@ connectDb();
 const app = express();
 app.use(express.json());
 
-require("../config/GoogleOAuth");
-require("../config/FacebookOAuth");
+require("../config/googleOAuth");
+require("../config/facebookOAuth");
 app.use(passport.initialize());
 
 app.use("/auth", authRoutes);
