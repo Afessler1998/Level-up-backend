@@ -1,6 +1,6 @@
-const makeCreatePersonalRecords = require("./createPersonalRecords");
-const makeGetPersonalRecords = require("./getPersonalRecords");
-const makeDeletePersonalRecords = require("./deletePersonalRecords");
+const makeCreatePersonalRecords = require("./CreatePersonalRecords");
+const makeGetPersonalRecords = require("./GetPersonalRecords");
+const makeDeletePersonalRecords = require("./DeletePersonalRecords");
 const { personalRecordsDb } = require("../../data-access/index");
 const makePersonalRecords = require("../../entities/personal-records/index");
 
