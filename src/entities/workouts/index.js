@@ -3,9 +3,9 @@ const validateWorkoutTitle = require("../../helpers/validators/validateWorkoutTi
 const validateDate = require("../../helpers/validators/validateDate");
 const validateExerciseName = require("../../helpers/validators/validateExerciseName");
 const validateSetData = require("../../helpers/validators/validateSetData");
-const buildMakeWorkout = require("./Workout");
-const buildMakeExercise = require("./Exercise");
-const buildMakeSet = require("./Set");
+const buildMakeWorkout = require("./workout");
+const buildMakeExercise = require("./exercise");
+const buildMakeSet = require("./set");
 
 const makeWorkout = buildMakeWorkout(
   makeId,

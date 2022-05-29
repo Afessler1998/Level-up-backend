@@ -7,7 +7,7 @@ const exerciseToDistanceData = require("../../helpers/graph-helpers/exerciseToDi
 const dataListToDataPoints = require("../../helpers/graph-helpers/dataListToDataPoints");
 const getHorizontalGuides = require("../../helpers/graph-helpers/getHorizontalGuides");
 const makeGetVolumeGraph = require("./getVolumeGraph");
-const makeGetEstimatedMaxGraph = require("./GetEstimatedMaxGraph");
+const makeGetEstimatedMaxGraph = require("./getEstimatedMaxGraph");
 const makeGetSpeedGraph = require("./getSpeedGraph");
 const makeGetDistanceGraph = require("./getDistanceGraph");
 

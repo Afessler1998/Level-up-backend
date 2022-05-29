@@ -1,5 +1,5 @@
 const makeId = require("../../helpers/makeId");
-const buildMakeSocialsUser = require("./SocialsUser");
+const buildMakeSocialsUser = require("./socialsUser");
 
 const makeSocialsUser = buildMakeSocialsUser(makeId);
 
