@@ -1,8 +1,8 @@
 const userServices = require("../../services/user-services/index");
-const makeSignUpEmail = require("./signUpEmail");
-const makeSignInEmail = require("./signInEmail");
-const makeGetPasswordResetCode = require("./getPasswordResetCode");
-const makeResetPassword = require("./resetPassword");
+const makeSignUpEmail = require("./SignUpEmail");
+const makeSignInEmail = require("./SignInEmail");
+const makeGetPasswordResetCode = require("./GetPasswordResetCode");
+const makeResetPassword = require("./ResetPassword");
 
 const signUpEmail = makeSignUpEmail(userServices.signUpEmail);
 const signInEmail = makeSignInEmail(userServices.signInEmail);
