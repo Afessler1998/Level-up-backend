@@ -4,17 +4,17 @@ const {
   makeSet
 } = require("../../entities/workouts/index");
 const { workoutsDb, personalRecordsDb } = require("../../data-access/index");
-const makeAddWorkout = require("./addWorkout");
-const makeAddExercise = require("./addExercise");
-const makeAddSet = require("./addSet");
-const makeRemoveWorkout = require("./removeWorkout");
-const makeRemoveExercise = require("./removeExercise");
-const makeRemoveSet = require("./removeSet");
-const makeHandleNewPr = require("./handleNewPr");
-const makeHandlePrRemoval = require("./handlePrRemoval");
-const makeGetWorkoutsOnDate = require("./getWorkoutsOnDate");
-const makeGetWorkoutDates = require("./getWorkoutDates");
-const makeGetExerciseHistory = require("./getExerciseHistory");
+const makeAddWorkout = require("./AddWorkout");
+const makeAddExercise = require("./AddExercise");
+const makeAddSet = require("./AddSet");
+const makeRemoveWorkout = require("./RemoveWorkout");
+const makeRemoveExercise = require("./RemoveExercise");
+const makeRemoveSet = require("./RemoveSet");
+const makeHandleNewPr = require("./HandleNewPr");
+const makeHandlePrRemoval = require("./HandlePrRemoval");
+const makeGetWorkoutsOnDate = require("./GetWorkoutsOnDate");
+const makeGetWorkoutDates = require("./GetWorkoutDates");
+const makeGetExerciseHistory = require("./GetExerciseHistory");
 
 const handleNewPr = makeHandleNewPr(workoutsDb, personalRecordsDb);
 const handlePrRemoval = makeHandlePrRemoval(workoutsDb, personalRecordsDb);
