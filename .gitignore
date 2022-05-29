@@ -1,4 +1,3 @@
-config/config.env
 node_modules/
 # stryker temp files
 .stryker-tmp
