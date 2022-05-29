@@ -3,11 +3,11 @@ const dotenv = require("dotenv");
 const passport = require("passport");
 const connectDb = require("../config/ConnectDb");
 const authenticateUser = require("../src/helpers/middlewares/authenticateUser");
-const authRoutes = require("./routes/auth");
-const userRoutes = require("./routes/user");
-const workoutsRoutes = require("./routes/workouts");
-const templatesRoutes = require("./routes/templates");
-const statsRoutes = require("./routes/stats");
+const authRoutes = require("./routes/Auth");
+const userRoutes = require("./routes/User");
+const workoutsRoutes = require("./routes/Workouts");
+const templatesRoutes = require("./routes/Templates");
+const statsRoutes = require("./routes/Stats");
 const mongoose = require("mongoose");
 const sendEmail = require("./utils/sendEmail");
 
