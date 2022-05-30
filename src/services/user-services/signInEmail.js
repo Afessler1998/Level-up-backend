@@ -1,6 +1,7 @@
 function makeSignInEmail(userDb, encryption, jwt) {
   return async function signInEmail(email, password) {
-    const user = await userDb.getUserByEmail(email);
+    const lowercasedEmail = email.toLowerCase();
+    const user = await userDb.getUserByEmail(lowercasedEmail);
     validPassword = await encryption.compare(password, user.password);
     if (!validPassword) {
       throw new Error("Password is invalid");
