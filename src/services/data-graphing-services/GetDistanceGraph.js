@@ -25,8 +25,6 @@ function makeGetDistanceGraph(
       paddedWidth: graphWidth - graphWidth * graphPadding * 2
     };
 
-    const yIncrement = 1;
-
     const workouts = await workoutsDb.getWorkoutsWithExerciseBetweenDates(
       templateId,
       startDate,
@@ -35,6 +33,8 @@ function makeGetDistanceGraph(
     );
     const exerciseList = extractExerciseData(workouts, templateId);
     const { dataList, peakValue } = exerciseToDistanceData(exerciseList);
+
+    const yIncrement = peakValue > 10 ? 2 : 1;
 
     const dataPoints = dataListToDataPoints(
       dataList,
