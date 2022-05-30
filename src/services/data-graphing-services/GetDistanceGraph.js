@@ -3,7 +3,9 @@ function makeGetDistanceGraph(
   extractExerciseData,
   exerciseToDistanceData,
   dataListToDataPoints,
-  getHorizontalGuides
+  getHorizontalGuides,
+  roundToNearestTen,
+  roundToNearestTwo
 ) {
   return async function getDistanceGraph(
     templateId,
@@ -34,7 +36,18 @@ function makeGetDistanceGraph(
     const exerciseList = extractExerciseData(workouts, templateId);
     const { dataList, peakValue } = exerciseToDistanceData(exerciseList);
 
-    const yIncrement = peakValue > 10 ? 2 : 1;
+    let peakOfGraph = peakValue;
+
+    let yIncrement = 1;
+
+    if (peakValue > 10) {
+      peakOfGraph = roundToNearestTwo(peakValue);
+      yIncrement = 2;
+    }
+    if (peakValue > 30) {
+      peakOfGraph = roundToNearestTen(peakValue);
+      yIncrement = 10;
+    }
 
     const dataPoints = dataListToDataPoints(
       dataList,
@@ -44,7 +57,7 @@ function makeGetDistanceGraph(
       paddingDimensions
     );
     const horizontalGuides = getHorizontalGuides(
-      peakValue,
+      peakOfGraph,
       paddingDimensions,
       yIncrement
     );

@@ -6,6 +6,8 @@ const exerciseToSpeedData = require("../../helpers/graph-helpers/exerciseToSpeed
 const exerciseToDistanceData = require("../../helpers/graph-helpers/exerciseToDistanceData");
 const dataListToDataPoints = require("../../helpers/graph-helpers/dataListToDataPoints");
 const getHorizontalGuides = require("../../helpers/graph-helpers/getHorizontalGuides");
+const roundToNearestTen = require("../../helpers/graph-helpers/roundToNearestTen");
+const roundToNearestTwo = require("../../helpers/graph-helpers/roundToNearestTwo");
 const makeGetVolumeGraph = require("./GetVolumeGraph");
 const makeGetEstimatedMaxGraph = require("./GetEstimatedMaxGraph");
 const makeGetSpeedGraph = require("./GetSpeedGraph");
@@ -40,7 +42,9 @@ const getDistanceGraph = makeGetDistanceGraph(
   extractExerciseData,
   exerciseToDistanceData,
   dataListToDataPoints,
-  getHorizontalGuides
+  getHorizontalGuides,
+  roundToNearestTen,
+  roundToNearestTwo
 );
 
 module.exports = {
